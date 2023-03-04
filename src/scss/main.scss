@@ -16,35 +16,35 @@
 header {
 	width: 100%;
 	padding: 10px 10px 0;
-	@include vars.flexer(center, flex-start, column);
+	@include vars.flexer(center, flex-start, row);
 
-	@include vars.media(phone-wide, max) {
-		height: 10vh;
-		background-color: transparent;
 
-		border-bottom: 1px solid #000;
+	height: 10vh;
+	background-color: transparent;
 
-		.headerParts {
-			height: 50%;
-			width: inherit;
+	border-bottom: 1px solid #000;
 
-			display: flex;
-			flex-direction: row;
-			justify-content: space-around;
-			align-items: center;
-			gap: 10px;
-		}
+	.headerParts {
+		height: 100%;
+		width: inherit;
 
-		p {
-			text-align: center;
-		}
-
-		// .headerTop {}
-
-		.headerBot {
-			align-items: flex-end;
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		gap: 10px;
 	}
+
+	p {
+		text-align: center;
+	}
+
+	// .headerTop {}
+
+	.headerBot {
+		align-items: flex-end;
+	}
+
 }
 
 .home {
@@ -54,164 +54,164 @@ header {
 
 	background-color: aquamarine;
 
-	@include vars.media(phone-wide, max) {
 
 
-		.banners {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			align-items: center;
 
-			gap: 10px;
+	.banners {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 
-			.banner1 {
-				height: 20vh;
-				width: 100%;
+		gap: 10px;
 
-				padding: 10px;
-				background-color: #e3e3e3db;
+		.banner1 {
+			height: 20vh;
+			width: 100%;
 
-				.bannerTop {
+			padding: 10px;
+			background-color: #e3e3e3db;
+
+			.bannerTop {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+
+				height: 70%;
+
+				width: inherit;
+
+				.dateTime {
+					height: 30%;
+
+					// .date {}
+
+					// .time {}
+				}
+
+				.temp {
+					align-self: flex-start;
+					font-size: 18px;
+
 					display: flex;
 					flex-direction: row;
-					justify-content: space-between;
+					justify-content: center;
 					align-items: center;
 
-					height: 70%;
-
-					width: inherit;
-
-					.dateTime {
-						height: 30%;
-
-						// .date {}
-
-						// .time {}
-					}
-
-					.temp {
-						align-self: flex-start;
-						font-size: 18px;
-
-						display: flex;
-						flex-direction: row;
-						justify-content: center;
-						align-items: center;
-
-						#temperature {
-							font-size: 50px;
-						}
-					}
-
-					// .condition {}
-				}
-
-				.bannerBot {
-					display: flex;
-					flex-direction: column;
-					justify-content: space-between;
-					align-items: flex-start;
-					width: inherit;
-
-					.windDirection {
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						align-items: flex-start;
-						width: inherit;
-					}
-
-					.windSpeed {
-						display: flex;
-						flex-direction: row;
-						justify-content: space-between;
-						align-items: flex-start;
-						width: inherit;
+					#temperature {
+						font-size: 50px;
 					}
 				}
+
+				// .condition {}
 			}
 
-			.banner2 {
-				height: 20vh;
-				width: 100%;
-
-				padding: 10px;
-				background-color: #e3e3e3db;
-
+			.bannerBot {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
+				align-items: flex-start;
+				width: inherit;
 
-
-				overflow: hidden;
-
-				.tempHours {
-
-					height: 10vh;
+				.windDirection {
 					display: flex;
 					flex-direction: row;
-					justify-content: space-around;
-					align-items: center;
-					gap: 30px;
-					width: 100%;
-
-					.cardHumidity {
-						height: 40px;
-						width: 30px;
-
-						// flex-shrink: 0;
-
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-
-						// .date {}
-
-						.logo {
-							width: 100%;
-
-							img {
-								width: 100%;
-							}
-						}
-
-						// .humidity {}
-					}
+					justify-content: space-between;
+					align-items: flex-start;
+					width: inherit;
 				}
 
-				// .diagram {
-				// 	canvas {
-				// 		display: block;
-				// 		position: static;
-				// 		height: 60px;
-				// 		width: 400%;
-				// 		background-color: #000;
-				// 	}
-				// }
+				.windSpeed {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: flex-start;
+					width: inherit;
+				}
+			}
+		}
 
-				.infos {
+		.banner2 {
+			height: 20vh;
+			width: 100%;
+
+			padding: 10px;
+			background-color: #e3e3e3db;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+
+			overflow: hidden;
+
+			.tempHours {
+
+				height: 10vh;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				gap: 30px;
+				width: 100%;
+
+				.cardHumidity {
+					height: 40px;
+					width: 30px;
+
+					// flex-shrink: 0;
+
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
-					align-items: flex-start;
+					align-items: center;
 
-					.infosdiv {
-						display: flex;
-						flex-direction: row;
-						justify-content: center;
-						align-items: center;
-						gap: 10px;
+					// .date {}
 
-						span {
-							width: 20px;
+					.logo {
+						width: 100%;
+
+						img {
+							width: 100%;
 						}
+					}
+
+					// .humidity {}
+				}
+			}
+
+			// .diagram {
+			// 	canvas {
+			// 		display: block;
+			// 		position: static;
+			// 		height: 60px;
+			// 		width: 400%;
+			// 		background-color: #000;
+			// 	}
+			// }
+
+			.infos {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+
+				.infosdiv {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					gap: 10px;
+
+					span {
+						width: 20px;
 					}
 				}
 			}
 		}
 	}
+
 }
 
 footer {
