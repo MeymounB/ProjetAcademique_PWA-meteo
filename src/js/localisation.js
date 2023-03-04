@@ -24,7 +24,7 @@ if ('geolocation' in navigator) {
 			const { latitude, longitude } = position.coords;
 
 			// Appel à l'API Google Maps pour récupérer la ville actuelle
-			fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&AIzaSyBfASjkykSG1KuYtdp3tKEpyQeJgxC1J64`)
+			fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&`)
 				.then(response => response.json())
 				.then(data => {
 					if (data.results.length > 0 && data.results[0].hasOwnProperty('address_components')) {
