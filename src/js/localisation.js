@@ -59,7 +59,7 @@ if ('geolocation' in navigator) {
 // 				const longitude = position.coords.longitude;
 
 // 				// Créer une requête pour l'API de géocodage inversé de Google
-// 				const requestUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyBfASjkykSG1KuYtdp3tKEpyQeJgxC1J64`;
+// 				const requestUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=`;
 
 // 				// Envoyer la requête avec fetch()
 // 				fetch(requestUrl)
